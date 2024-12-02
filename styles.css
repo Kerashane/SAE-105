@@ -1,15 +1,83 @@
-body{
-background-color: darkgray;
- 
+body {
+    background-image: url(../img/téléchargement\ \(1\).gif);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #FFF;
 }
 
-header{
-display: flex;
-align-items: center;
-background-color: darkslategrey;
-gap: 20px;
-margin-left: auto;
-color: rgb(253, 253, 253)
-
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+    color: rgb(253, 253, 253);
+    padding: 20px;
 }
 
+.text {
+    color: #FFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lien {
+    color: white;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.lien:hover {
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: solid;
+}
+
+span {
+    font-weight: bold;
+    color: rgb(126, 77, 112);
+}
+
+.left {
+    margin-left: auto;
+}
+
+.boutton {
+    width: max-content;
+    color: #FFF;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(146, 81, 138);
+    transition: 0.4s;
+}
+
+.boutton:hover {
+    background-color: white;
+    color: rgb(157, 91, 130);
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.gros-titre {
+    font-size: 100px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.cadre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px #FFF solid; */
+    background: rgb(0, 0, 0, 0.3);
+    padding: 16px 64px;
+    border-radius: 80px;
+}
