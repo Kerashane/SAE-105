@@ -1,28 +1,20 @@
-let param = new URLSearchParams(location.search);
-let numsae = param.get("sae");
-console.log(numsae);
+// string
+const chaineDeCaracteres = '';
+// number
+const chiffres = 0;
+// Object
+const objet = {};
+// Array
+const tableau = [];
+// Boolean : true, false
+const vrai = true;
+const faux = false;
 
-let cler = Object.keys(SAE[numsae].ressources);
-let valeursr = Object.values(SAE[numsae].ressources);
-listr = "";
-for (i = 0; cler.length > i; i++) {
-    listr += "<div>" + cler[i] + " : " + valeursr[i] + "</div>";
+let html = '';
+
+for (const clef in SAE) {
+    html += '<div><div class="sae"><h2>'+clef+'</h2><p>'+SAE[clef].titre+'</p>'+
+    '<a href="sae-details.html?clef='+clef+'" class="competences">'+SAE[clef].compétences.join(', ')+'</a></div></div>';
 }
-console.log(listr);
 
-let apprentitech = Object.keys(SAE[numsae].AC);
-let devtech = Object.values(SAE[numsae].AC);
-dev = "";
-for (i=0; apprentitech.length > i; i++){
-    dev += "<div>" + apprentitech[i] + " : " + devtech[i] + "</div>";
-}
-console.log(dev);
-
-document.querySelector(".cadre").innerHTML = `
-<h2> ${numsae}</h2>
-<div>${SAE[numsae].titre}</div>
-<div>${SAE[numsae].compétences}</div>
-<div>${SAE[numsae].description}</div>
-<div>${listr}</div>
-<div>${dev}</div>
-`;
+document.querySelector(".zone-sae").innerHTML=html;
